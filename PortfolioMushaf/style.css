@@ -1,0 +1,255 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('fonts/static/Nunito-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'NunitoBold';  
+    src: url('fonts/static/Nunito-ExtraBold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #E0E6ED;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #F0F2F5;
+}
+
+.navbar {
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 12px 7%;
+    background-color: #10253E;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100000;
+}
+
+.logo {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+ul li {
+    margin-right: 15px;
+}
+
+ul li a {
+    transition: color .2s, transform .2s;
+}
+
+ul li a:hover {
+    color: #274c79;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 30px;
+    background-color: rgb(42, 159, 228);
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: background-color 0.2s, transform 0.2s;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgb(30, 130, 200);
+    transform: scale(1.05);
+}
+
+section {
+    padding: 0 11%;
+    height: 100vh;
+}
+
+.home {
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 70px; 
+}
+
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+    animation: float 4s cubic-bezier(0.65, -0.15, 0.35, 1.15) infinite;
+}
+
+.welcome-text h2 {
+    font-size: 22px;
+    color: #10253E;
+}
+
+.welcome-text h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 18px 0 10px;
+    font-family: NunitoBold, sans-serif;
+    color: #10253E;
+}
+
+p {
+    font-family: NunitoBold, sans-serif;
+    color: #10253e9b;
+}
+
+.company-info{
+    height: 100vh;
+    padding: 120px 11%;
+}
+
+ h2{
+    
+    color: #10253E; 
+}
+
+.card-content{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    margin-top: 40px;
+    align-items: center;
+    
+}
+
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    
+}
+
+.info{
+    padding: 5px 20px;
+}
+
+.info p{
+    padding: 5px 3px;
+    font-size: 13px;
+}
+
+.card-content button{
+    margin-bottom: 15px;
+    background-color: #10253E;
+
+}
+
+
+.card-content button:hover{
+    background-color: transparent;
+    border-style: solid;
+    border-color: #10253E;
+    color: #10253E;
+}
+
+
+
+.profile img{
+    width: 100%;
+}
+svg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+.company-info{
+    height: 70vh;
+}
+
+
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 876px) {
+    ul {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .wave{
+        position: absolute;
+        bottom: -98px;
+    }
+}
+
+@media (max-width: 923px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .welcome-image img {
+        width: 300px; /* Adjust as needed */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .welcome-text {
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+}
+
+
